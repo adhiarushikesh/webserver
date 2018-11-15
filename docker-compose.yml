@@ -1,0 +1,19 @@
+version: "3"
+services:
+  web:
+  #your image detials 
+  image: adhiar/firendlyhello:hub1
+  deploy:
+    replicas: 5
+    resources:
+      limits:
+      cpus: "0.1"
+      memory: 50M
+    restart_policy:
+      condition: on-failure
+    ports:
+      - "3001:80"
+    network:
+      - webnet
+networks:
+  webnet:
