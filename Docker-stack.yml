@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
   #your Image detials 
-  image: adhiar/webserver:1
+  image: adhiar/friendlyhello:hub1
   deploy:
     replicas: 5
     resources:
